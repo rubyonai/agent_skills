@@ -1,8 +1,9 @@
 # Agent Skills
 
+[![Gem Version](https://badge.fury.io/rb/agent_skills.svg)](https://rubygems.org/gems/agent_skills)
 [![CI](https://github.com/rubyonai/agent_skills/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/rubyonai/agent_skills/actions/workflows/ci.yml)
-[![Gem Version](https://badge.fury.io/rb/agent_skills.svg)](https://badge.fury.io/rb/agent_skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Ruby](https://img.shields.io/badge/Ruby-3.0%2B-red.svg)](https://www.ruby-lang.org)
 
 Ruby implementation of the [Agent Skills](https://agentskills.io) open standard — a simple format for giving AI agents new capabilities.
 
@@ -34,35 +35,27 @@ gem install agent_skills
 
 ## Quick Start
 
-### Create a skill
-
 ```bash
+# Create a new skill
 agent-skills new my-skill -d "Description of what this skill does"
-```
 
-### Validate a skill
-
-```bash
+# Validate against spec
 agent-skills validate ./my-skill
-```
 
-### Package for distribution
-
-```bash
+# Package for distribution
 agent-skills pack ./my-skill
-# Creates: my-skill.skill
 ```
 
 ## CLI Commands
 
 | Command | Description |
 |---------|-------------|
-| `agent-skills new NAME -d DESC` | Create a new skill |
-| `agent-skills validate PATH` | Validate skill against spec |
-| `agent-skills list` | List discovered skills |
-| `agent-skills info PATH` | Show skill details |
-| `agent-skills pack PATH` | Package into .skill file |
-| `agent-skills unpack FILE` | Extract a .skill file |
+| `new NAME -d DESC` | Create a new skill |
+| `validate PATH` | Validate skill against spec |
+| `list` | List discovered skills |
+| `info PATH` | Show skill details |
+| `pack PATH` | Package into .skill file |
+| `unpack FILE` | Extract a .skill file |
 
 ## Ruby API
 
@@ -96,7 +89,7 @@ AgentSkills::Generator.create(
 )
 
 # Package and distribute
-AgentSkills::Packager.pack('./my-skill')              # => "my-skill.skill"
+AgentSkills::Packager.pack('./my-skill')
 AgentSkills::Packager.unpack('my-skill.skill', output: './extracted')
 ```
 
@@ -138,3 +131,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 - [Agent Skills Specification](https://agentskills.io)
 - [Example Skills](https://github.com/anthropics/skills)
+- [RubyGems](https://rubygems.org/gems/agent_skills)
