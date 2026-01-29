@@ -7,29 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2025-01-29
+
 ### Added
-- Initial project setup
-- Core `Skill` class for parsing SKILL.md files
-- `Validator` class for spec compliance checking
+
+- `Skill` class for parsing SKILL.md files with YAML frontmatter
+- `Validator` class for validating skills against agentskills.io specification
 - `Generator` class for scaffolding new skills
-- `Loader` class for discovering skills from paths
-- `Packager` class for creating .skill bundles
-- CLI with `new`, `validate`, `list`, `pack`, `unpack`, `info` commands
-
-### Coming Soon
-- Rails integration with generators
-- Prompt XML rendering
-- Semantic skill search
-
-## [0.1.0] - TBD
-
-### Added
-- First public release
-- Full implementation of Agent Skills specification
-- CLI tool (`agent-skills`)
-- Ruby API for loading and validating skills
+- `Loader` class for discovering skills from filesystem paths
+- `Packager` class for creating and extracting .skill bundles
+- CLI tool with commands: `new`, `validate`, `list`, `info`, `pack`, `unpack`, `version`
+- Support for `scripts/`, `references/`, and `assets/` directories
+- `to_prompt_xml` method for LLM prompt injection
+- GitHub Actions CI workflow
 
 ---
 
-[Unreleased]: https://github.com/YOUR_USERNAME/agent_skills/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/YOUR_USERNAME/agent_skills/releases/tag/v0.1.0
+[Unreleased]: https://github.com/rubyonai/agent_skills/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/rubyonai/agent_skills/releases/tag/v0.1.0
