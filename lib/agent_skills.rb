@@ -6,6 +6,7 @@ require_relative "agent_skills/skill"
 require_relative "agent_skills/validator"
 require_relative "agent_skills/generator"
 require_relative "agent_skills/loader"
+require_relative "agent_skills/packager"
 
 module AgentSkills
 end
