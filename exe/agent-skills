@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "agent_skills"
+require "agent_skills/cli"
+
+AgentSkills::CLI.start(ARGV)
