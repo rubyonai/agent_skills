@@ -3,6 +3,7 @@
 require_relative "agent_skills/version"
 require_relative "agent_skills/errors"
 require_relative "agent_skills/skill"
+require_relative "agent_skills/validator"
 
 module AgentSkills
 end
